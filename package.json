@@ -1,0 +1,29 @@
+{
+  "name": "react-natvie-purple",
+  "version": "0.0.2",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purple-net/react-native-purple.git"
+  },
+  "keywords": [
+    "react-native-purple"
+  ],
+  "author": "purple-net",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/purple-net/react-native-purple/issues"
+  },
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react-native-vector-icons": "~3.0.0"
+  },
+  "homepage": "https://github.com/purple-net/react-native-purple#readme",
+  "dependencies": {
+    "react-native-vector-icons": "^3.0.0"
+  }
+}
