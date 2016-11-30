@@ -11,7 +11,7 @@ const PurpleDivider = ({style}) => (
 styles = StyleSheet.create({
   container: {
     height: 1,
-    backgroundColor: colors.grey5
+    backgroundColor: colors.grey6
   }
 })
 

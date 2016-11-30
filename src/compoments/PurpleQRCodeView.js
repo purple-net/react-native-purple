@@ -20,7 +20,7 @@ var {
 */
 import Camera from 'react-native-camera';
 
-var QRCodeScreen = React.createClass({
+var PurpleQRCodeView = React.createClass({
 
   propTypes: {
     cancelButtonVisible: React.PropTypes.bool,
@@ -126,4 +126,4 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = QRCodeScreen;
+module.exports = PurpleQRCodeView;

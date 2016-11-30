@@ -11,6 +11,7 @@ export default {
   grey3: '#86939e',
   grey4: '#bdc6cf',
   grey5: '#e1e8ee',
+  grey6: '#f2f2f2',
   dkGreyBg: '#232323',
   greyOutline: '#cbd2d9',
   searchBg: '#303337',

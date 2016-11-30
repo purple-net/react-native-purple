@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 
 
-export class WebViewer extends Component{
+export class PurpleWebView extends Component{
   constructor(props){
     super(props);
     this.state={
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = WebViewer;
+module.exports = PurpleWebView;
