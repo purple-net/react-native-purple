@@ -13,14 +13,17 @@ import {
   WebView,
   Dimensions,
 } from 'react-native';
+import PurpleHeader from './PurpleHeader';
 
 
 export class PurpleWebView extends Component{
   constructor(props){
     super(props);
     this.state={
-      source:props.source?props.source:{}
+      title:props.title?props.title:'',
+      source:props.source?props.source:{},
     };
+    console.log(this.state);
   };
   componentWillMount(){
 
@@ -32,12 +35,10 @@ export class PurpleWebView extends Component{
       var {height, width} = Dimensions.get('window');
       return(
         <View style={styles.container}>
-          <View style={styles.header}>
-            <Text style={[styles.headerLeftIcon, styles.fontFamily]}>&#xe601;</Text>
-            <Text style={[styles.headerLeftText]} onPress={this.goBack.bind(this)}>返回</Text>
-          </View>
+          <PurpleHeader title={this.state.title} goBack={this.props.goBack}>
+          </PurpleHeader>
           <View style={{flex:1}}>
-            <WebView startInLoadingState={true}  style={{width:width,height:height}} source={{uri: this.state.url}} bounces={true}  >
+            <WebView automaticallyAdjustContentInsets={false}﻿ startInLoadingState={true}  style={{width:width,height:height}} source={this.state.source} bounces={true}  >
             </WebView>
           </View>
         </View>

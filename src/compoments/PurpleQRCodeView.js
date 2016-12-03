@@ -9,16 +9,9 @@ import {
   TouchableOpacity,
   VibrationIOS,
 } from 'react-native';
-/*
-var {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-  VibrationIOS,
-} = React;
-*/
+
 import Camera from 'react-native-camera';
+import PurpleHeader from './PurpleHeader';
 
 var PurpleQRCodeView = React.createClass({
 
@@ -48,44 +41,29 @@ var PurpleQRCodeView = React.createClass({
 
   _onBarCodeRead: function(result) {
     var $this = this;
-
     if (this.barCodeFlag) {
       this.barCodeFlag = false;
-
       setTimeout(function() {
         VibrationIOS.vibrate();
         $this.props.navigator.pop();
-        $this.props.onSucess(result.data);
+        $this.props.onSucess(result);
       }, 1000);
     }
   },
 
   render: function() {
-    var cancelButton = null;
     this.barCodeFlag = true;
-
-    if (this.props.cancelButtonVisible) {
-      cancelButton = <CancelButton onPress={this._onPressCancel} title={this.props.cancelButtonTitle} />;
-    }
-
     return (
-      <Camera onBarCodeRead={this._onBarCodeRead}  style={styles.camera}>
-        <View style={styles.rectangleContainer}>
-          <View style={styles.rectangle}/>
-        </View>
-        {cancelButton}
-      </Camera>
-    );
-  },
-});
-
-var CancelButton = React.createClass({
-  render: function() {
-    return (
-      <View style={styles.cancelButton}>
-        <TouchableOpacity onPress={this.props.onPress}>
-          <Text style={styles.cancelButtonText}>{this.props.title}</Text>
-        </TouchableOpacity>
+      <View style={[{flex:1}]}>
+        <PurpleHeader title="二维码/条码" goBack={()=>{
+          this.props.navigator.pop();
+        }}>
+        </PurpleHeader>
+        <Camera onBarCodeRead={this._onBarCodeRead}  style={styles.camera}>
+          <View style={styles.rectangleContainer}>
+            <View style={styles.rectangle}/>
+          </View>
+        </Camera>
       </View>
     );
   },
@@ -111,18 +89,6 @@ var styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#00FF00',
     backgroundColor: 'transparent',
-  },
-
-  cancelButton: {
-    bottom: 0,
-    width:100,
-    justifyContent:'center',
-    backgroundColor: '#fff',
-  },
-  cancelButtonText: {
-    fontSize: 17,
-    fontWeight: '500',
-    color: '#0097CE',
   },
 });
 

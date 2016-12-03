@@ -140,32 +140,6 @@ class PurpleItem extends Component{
     )
   };
 };
-/*
-ListItem.defaultProps = {
-  underlayColor: 'white',
-  chevronColor: colors.grey4,
-  rightIcon: {name: 'chevron-right'},
-  hideChevron: false,
-  roundAvatar: false
-}
-
-ListItem.propTypes = {
-  title: PropTypes.string,
-  avatar: PropTypes.any,
-  icon: PropTypes.any,
-  onPress: PropTypes.func,
-  rightIcon: PropTypes.object,
-  underlayColor: PropTypes.string,
-  subTitle: PropTypes.string,
-  subTitleStyle: PropTypes.any,
-  containerStyle: PropTypes.any,
-  wrapperStyle: PropTypes.any,
-  titleStyle: PropTypes.any,
-  hideChevron: PropTypes.bool,
-  chevronColor: PropTypes.string,
-  roundAvatar: PropTypes.bool
-}
-*/
 
 styles = StyleSheet.create({
   avatar: {
@@ -185,13 +159,13 @@ styles = StyleSheet.create({
     marginRight: 8
   },
   title: {
-    fontSize: normalize(14),
+    fontSize: normalize(12),
     color: colors.grey1
   },
   subTitle: {
     color: colors.grey3,
-    fontSize: normalize(12),
-    marginTop: 1,
+    fontSize: normalize(10),
+    marginTop: 5,
     ...Platform.select({
       ios: {
         fontWeight: '600'
