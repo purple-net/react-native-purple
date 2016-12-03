@@ -1,4 +1,12 @@
-## Cross Platform React Native UI Toolkit
+## react-native-purple FrameWork
+
+##写在前面
+继purple-net后基于react-native 实现react-native-purple框架（代码风格参考 [react-native-elements](https://github.com/react-native-community/react-native-elements) ）
+>UI TookIt
+> util
+> 
+
+
 
 ## Get Started
 
