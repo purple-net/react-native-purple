@@ -19,14 +19,7 @@ import PurpleHeader from './PurpleHeader';
 export class PurpleWebView extends Component{
   constructor(props){
     super(props);
-    this.state={
-      title:props.title?props.title:'',
-      source:props.source?props.source:{},
-    };
-    console.log(this.state);
-  };
-  componentWillMount(){
-
+    console.log(props);
   };
   goBack(){
    this.props.navigator.pop();
@@ -35,10 +28,10 @@ export class PurpleWebView extends Component{
       var {height, width} = Dimensions.get('window');
       return(
         <View style={styles.container}>
-          <PurpleHeader title={this.state.title} goBack={this.props.goBack}>
+          <PurpleHeader title={this.props.title} goBack={this.goBack.bind(this)}>
           </PurpleHeader>
           <View style={{flex:1}}>
-            <WebView automaticallyAdjustContentInsets={false}﻿ startInLoadingState={true}  style={{width:width,height:height}} source={this.state.source} bounces={true}  >
+            <WebView automaticallyAdjustContentInsets={false}﻿ startInLoadingState={true}  style={{width:width,height:height}} source={this.props.source} bounces={true}  >
             </WebView>
           </View>
         </View>

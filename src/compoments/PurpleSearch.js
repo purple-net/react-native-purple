@@ -27,7 +27,7 @@ import {get,post} from './util/HttpClient'
 
 
 
-class SearchBar extends Component{
+class PurpleSearch extends Component{
   constructor (props) {
       super(props);
       this.state = {
@@ -268,4 +268,4 @@ export class Trade extends Component{
   };
 };
 
-module.exports = Trade;
+module.exports = PurpleSearch;

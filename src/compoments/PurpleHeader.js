@@ -10,6 +10,7 @@ import {
   TouchableHighlight,
   TouchableOpacity,
 } from 'react-native';
+import colors from '../config/colors';
 import ActionButton from 'react-native-action-button';
 import Button from 'react-native-button';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -26,7 +27,7 @@ class PurpleHeader extends Component{
       this.state.headerCenterText={
         fontSize:18,
         color:'#fff',
-        marginLeft:-80,
+        marginLeft:-60,
       }
     }else{
       this.state.headerCenterText={
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
     paddingTop:20,
     paddingLeft:10,
     height:55,
-    backgroundColor:'#444',
+    backgroundColor:colors.blue1,
     flexDirection:'row',
     alignItems:'center',
   },
