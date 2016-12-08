@@ -13,6 +13,7 @@ import PurpleButton from './compoments/PurpleButton';
 import PurpleWebView from './compoments/PurpleWebView';
 import PurpleLoading from './compoments/PurpleLoading';
 import PurpleQRCodeView from './compoments/PurpleQRCodeView';
+import PurpleSearchInput from './compoments/PurpleSearchInput';
 
 console.log('purpleStyles');
 console.log(purpleStyles);
@@ -32,6 +33,7 @@ const Components = {
   PurpleWebView,
   PurpleLoading,
   PurpleQRCodeView,
+  PurpleSearchInput,
 }
 
 module.exports = Components

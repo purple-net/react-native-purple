@@ -19,7 +19,6 @@ import PurpleHeader from './PurpleHeader';
 export class PurpleWebView extends Component{
   constructor(props){
     super(props);
-    console.log(props);
   };
   goBack(){
    this.props.navigator.pop();
